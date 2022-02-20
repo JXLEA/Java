@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="daos.xml"/>
+
+    <bean id="eventService" class="com.ua.education.service.EventService">
+        <property name="eventDao" ref="eventDao"/>
+    </bean>
+
+    <bean id="ticketService" class="com.ua.education.service.TicketService">
+        <property name="ticketDao" ref="ticketDao"/>
+    </bean>
+
+    <bean id="userService" class="com.ua.education.service.UserService">
+        <property name="userDao" ref="userDao"/>
+    </bean>
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="repository.xml"/>
+
+    <bean id="eventDao" class="com.ua.education.dao.EventDao">
+        <property name="storage" ref="storage"/>
+    </bean>
+
+    <bean id="ticketDao" class="com.ua.education.dao.TicketDao">
+        <property name="storage" ref="storage"/>
+    </bean>
+
+    <bean id="userDao" class="com.ua.education.dao.UserDao">
+        <property name="storage" ref="storage"/>
+    </bean>
+
+</beans>
