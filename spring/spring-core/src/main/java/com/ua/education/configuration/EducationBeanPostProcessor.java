@@ -16,6 +16,10 @@ public class EducationBeanPostProcessor implements BeanPostProcessor, BeanFactor
 
     private final List<Object> prototypeBeans = new ArrayList<>();
 
+    // The prototype scoped beans MUST implement the DisposableBean interface.
+    // This interface defines a "destroy()" method.
+    // This method should be used instead of the @PreDestroy annotation.
+
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         // after start up, keep track of the prototype scoped beans.

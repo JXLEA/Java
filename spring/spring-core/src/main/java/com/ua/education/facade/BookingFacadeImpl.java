@@ -6,12 +6,13 @@ import com.ua.education.model.User;
 import com.ua.education.service.EventService;
 import com.ua.education.service.TicketService;
 import com.ua.education.service.UserService;
+import org.springframework.beans.factory.DisposableBean;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class BookingFacadeImpl implements BookingFacade {
+public class BookingFacadeImpl implements BookingFacade, DisposableBean {
 
     private final EventService eventService;
     private final TicketService ticketService;
@@ -102,5 +103,10 @@ public class BookingFacadeImpl implements BookingFacade {
     @Override
     public boolean cancelTicket(long ticketId) {
         return ticketService.cancel(ticketId);
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("Pre destroy method for bean with prototype scope - BookingFacadeImpl");
     }
 }
