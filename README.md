@@ -2,5 +2,5 @@
 
  Backen.Java.WEB
       
-   1 Сервлеты - https://ru.wikipedia.org/wiki/Сервлет_(Java); 
-   2 Сервлет Контейнер(Веб сервер) - https://ru.wikipedia.org/wiki/Контейнер_сервлетов;
+   - Сервлеты - https://ru.wikipedia.org/wiki/Сервлет_(Java); 
+   - Сервлет Контейнер(Веб сервер) - https://ru.wikipedia.org/wiki/Контейнер_сервлетов;
