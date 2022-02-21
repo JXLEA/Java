@@ -3,4 +3,4 @@
  Backend.Java.WEB
       
    - Сервлеты - https://ru.wikipedia.org/wiki/Сервлет_(Java); 
-   - Сервлет Контейнер(Веб сервер) - https://ru.wikipedia.org/wiki/Контейнер_сервлетов;
+   - Сервлет Контейнеры - https://ru.wikipedia.org/wiki/Контейнер_сервлетов;
