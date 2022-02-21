@@ -1,19 +1,19 @@
-package com.ua.education.compare;
+package com.ua.education.comparing;
 
 import java.util.Objects;
 
-public class CustomComparableEntity implements Comparable<CustomComparableEntity>{
+public class EntityComparable implements Comparable<EntityComparable> {
 
     private String name;
     private String surname;
 
-    public CustomComparableEntity(String name, String surname) {
+    public EntityComparable(String name, String surname) {
         this.name = name;
         this.surname = surname;
     }
 
     @Override
-    public int compareTo(CustomComparableEntity another) {
+    public int compareTo(EntityComparable another) {
         int res = this.name.compareTo(another.name);
         if (res == 0) {
             return this.surname.compareTo(another.surname);
@@ -25,7 +25,7 @@ public class CustomComparableEntity implements Comparable<CustomComparableEntity
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CustomComparableEntity that = (CustomComparableEntity) o;
+        EntityComparable that = (EntityComparable) o;
         return Objects.equals(name, that.name) && Objects.equals(surname, that.surname);
     }
 
@@ -40,5 +40,9 @@ public class CustomComparableEntity implements Comparable<CustomComparableEntity
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 '}';
+    }
+
+    public String getSurname() {
+        return surname;
     }
 }
