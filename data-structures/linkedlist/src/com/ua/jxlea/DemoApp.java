@@ -5,15 +5,8 @@ import java.util.Stack;
 public class DemoApp {
 
   public static void main(String[] args) {
-
-//    Comparator<Account> accountComparator = new Reflection.RandomFieldComparator<>(Account.class);
-//    System.out.println(accountComparator);
-//    Accounts.generateAccountList(10)
-//            .stream()
-//            .sorted(accountComparator)
-//            .forEach(System.out::println);
-//    var head = createLinkedList(4, 3, 9, 1);
-//    printReversed(head);
+    var head = createLinkedList(4, 3, 9, 1);
+    printReversed(head);
   }
 
   /**
